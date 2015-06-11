@@ -106,7 +106,9 @@ shapefile.read('tz_world_mp.shp', function(error, collection){
           properties: {
             name: { type: "string" },
             location: {
-              type: "geo_shape"
+              type: "geo_shape",
+              tree: "quadtree",
+              precision: "1m"
             }
           }
         }
